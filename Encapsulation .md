@@ -1,36 +1,50 @@
-#  Method Overriding-Fish and Shark Class Inheritance in Python
+#  Python OOP: Encapsulation with Private Members
 
-##  AIM:
-To write a Python program that demonstrates class inheritance by creating a parent class `Fish` with a method `type`, and a child class `Shark` that overrides the `type` method.
+##  AIM
 
-##  ALGORITHM:
+To implement **Encapsulation** in Python by defining a class `Rectangle` with **private member variables** `__length` and `__breadth`.
 
-1. Define the `Fish` class with a method named `type()` that prints `"fish"`.
-2. Define the `Shark` class as a subclass of `Fish`, and override the `type()` method to print `"shark"`.
-3. Create an instance of the `Fish` class named `obj_goldfish`.
-4. Create an instance of the `Shark` class named `obj_hammerhead`.
-5. Use a `for` loop to iterate over both objects.
-6. Within the loop, call the `type()` method using the loop variable.
-7. Output will demonstrate method overriding: printing `"fish"` and `"shark"` accordingly.
+---
 
-##  PROGRAM:
+##  ALGORITHM
+
+1. **Define the Class**:
+   - Create a class `Rectangle` with two private attributes: `__length` and `__breadth`.
+
+2. **Initialize Variables**:
+   - Use the `__init__()` constructor to set initial values for `__length` and `__breadth`.
+
+3. **Print Values**:
+   - Display the private variables from within the class to demonstrate access.
+
+4. **Instantiate the Object**:
+   - Create an object of the `Rectangle` class to trigger the constructor.
+
+---
+
+##  Program
 ```
-class Fish:
-    def type(self):
-        print("fish")
-class Shark:
-    def type(self):
-        print("shark")
-obj_goldfish=Fish()
-obj_hammerhead=Shark()
+class Rectangle:
+    def __init__(self, length, width):
+        # private variables
+        self.__length = length
+        self.__width = width
 
-for i in (obj_goldfish,obj_hammerhead):
-    i.type()
+    def display(self):
+        # accessing private variables within the class
+        print(self.__length)
+        print(self.__width)
+
+# create object
+rect = Rectangle(5, 3)
+
+# print values within the class
+rect.display()
 ```
+## Output
 
-## OUTPUT
+<img width="740" height="186" alt="image" src="https://github.com/user-attachments/assets/6baaa9c7-4939-40c7-9ade-304f155d3ac9" />
 
-<img width="746" height="180" alt="image" src="https://github.com/user-attachments/assets/463a0887-58f7-421c-8365-8c74aa0dbaf3" />
 
-## RESULT
+## Result
 Thus, the program has been executed successfully.
